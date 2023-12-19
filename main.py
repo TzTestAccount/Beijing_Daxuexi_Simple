@@ -53,8 +53,7 @@ if os.name == 'nt':
             create=os.popen(f'''SchTasks /Create /SC DAILY /MO 2 /TN {task_name} /TR "'{sys.executable}' '{os.path.realpath(__file__)}'" /ST 09:00''')
             print('创建成功')
 
-# accounts = getAccounts()
-accounts=[('********', '*********')]
+accounts = getAccounts()
 print(f'账号数量：{len(accounts)}')
 successful = 0
 count = 0
