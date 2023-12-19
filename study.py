@@ -97,8 +97,7 @@ def study(username, password, ua):
 
     haveLearned = bjySession.get(learnedInfo).json()
 
-    if int(orgID) != nOrgID:
-        raise Exception('组织id不匹配，如果看到这个请开个issue说下')
+
 
     if f"学习课程：《{title}》" in list(map(lambda x: x['text'], haveLearned['data'])):
         print(f'{title} 成功完成学习')
